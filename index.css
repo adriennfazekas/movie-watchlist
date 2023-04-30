@@ -20,6 +20,14 @@ header {
 }
 h1, p {
     color: white;
+    margin: 0 1rem 0 1rem;
+}
+p{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+p:hover {
+    color: rgb(159, 162, 165);
 }
 
 /* SEARCH FIELD */
@@ -29,6 +37,35 @@ input, button {
     padding: 0.5em;
     
 }
+input {
+    background-image: url(images/input.png);
+    background-repeat: no-repeat;
+    background-position: 5px ;
+}
+::placeholder {
+    color: #6B7280;
+}
 button {
     cursor: pointer;
+    justify-self: flex-start;
+}
+   
+
+/**/
+main {
+    display: grid;
+    grid-template-areas: 
+        "search search"
+        "field field";
+    grid-template-columns: 70% 70px;
+    column-gap: 0;
+    row-gap: 11rem;
+    justify-content: center;
+}
+.field {
+    grid-area: field;
+    place-self: center;
+    text-align: center;
+    color: #DFDDDD;
+    font-size: 0.8rem;
 }
